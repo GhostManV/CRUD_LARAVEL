@@ -9,15 +9,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 
 <body>
+    <style>
+        body{
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    }
+
+.footer{
+    margin-top: auto;
+    display: table;
+    width: 100%;
+    height: 13vh;
+    text-align: center;
+    }
+
+    </style>
+<header>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark text-white>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">&nbsp;&nbsp;RV</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/GhostManV/CRUD_LARAVEL.git"><i class="bi bi-github"></i>&nbsp;Codigo Github</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </header>
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Laravel 8 CRUD</h2>
+                    <h2>Laravel CRUD Estudiantes</h2>
                     <!-- The Modal -->
                     <div class="modal fade" id="myModal">
                         <div class="modal-dialog">
@@ -119,11 +154,12 @@
         </div>
         @endif
         <div class="container mt-3">
-            <h2>Hoverable Dark Table</h2>
-            <p>The .table-hover class adds a hover effect (grey background color) on table rows:</p>
+
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" onclick="limpiarForm();" data-bs-placement="right" title="Agregar Estudiante Nuevo" id="nuevo">
                 Nuevo Estudiante
             </button>
+            <br>
+            <br>
             <table class="table table-dark table-hover pb-5 text-center">
                 <thead>
                     <tr>
@@ -169,7 +205,11 @@
                 </tbody>
             </table>
         </div>
-
+        </div>
+        <div class="mt-5 p-4 bg-dark text-white text-center footer">
+<p>CRUD de la tabla Estudiantes realizado con Node.js </p>
+<p>© Copyright 2022 R.V.Enterprises</p>
+</div>
         <script>
             function carnetValidation(textbox) {
                 const pattern = /(^E{1})([0-9]{3})$/;
